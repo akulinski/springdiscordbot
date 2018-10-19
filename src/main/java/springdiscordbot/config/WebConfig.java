@@ -1,4 +1,4 @@
-package core.config;
+package springdiscordbot.config;
 
 
 import org.springframework.context.annotation.Bean;
@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
         "classpath:application.properties"
 })
 @EnableWebMvc
-@ComponentScan(basePackages = "core.beans")
+@ComponentScan(basePackages = "springdiscordbot.core.beans")
 public class WebConfig {
 
     @Bean

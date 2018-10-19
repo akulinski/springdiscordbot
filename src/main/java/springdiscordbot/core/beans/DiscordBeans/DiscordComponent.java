@@ -1,6 +1,6 @@
-package core.beans.DiscordBeans;
+package springdiscordbot.core.beans.DiscordBeans;
 
-import core.beans.Events.discord.Listeners.ReadyListener;
+import springdiscordbot.Events.discord.Listeners.ReadyListener;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import org.springframework.beans.factory.annotation.Value;

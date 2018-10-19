@@ -1,4 +1,4 @@
-package core.beans.Controllers;
+package springdiscordbot.core.beans.Controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

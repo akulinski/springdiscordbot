@@ -1,4 +1,4 @@
-package core.config;
+package springdiscordbot.config;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -15,7 +15,7 @@ public class AppInitializer implements WebApplicationInitializer {
     public void onStartup(ServletContext container) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(WebConfig.class);
-        context.scan("core.beans");
+        context.scan("springdiscordbot.core.beans");
         container.addListener(new ContextLoaderListener(context));
         ServletRegistration.Dynamic dispatcher = container.addServlet("mvc", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);

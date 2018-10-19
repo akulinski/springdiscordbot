@@ -1,4 +1,4 @@
-package core.beans.Events.discord.Listeners;
+package springdiscordbot.Events.discord.Listeners;
 
 import net.dv8tion.jda.core.events.Event;
 import net.dv8tion.jda.core.events.ReadyEvent;
