@@ -11,5 +11,11 @@ pipeline {
                 sh 'mvn -B -DskipTests clean install'
             }
         }
+        stage('Example Test') {
+                    steps {
+                        echo '--------------------TESTING---------------------------------------'
+                        sh 'java -version'
+                    }
+                }
     }
 }
