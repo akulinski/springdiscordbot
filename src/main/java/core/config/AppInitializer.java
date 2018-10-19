@@ -14,6 +14,7 @@ public class AppInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext container) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        context.register(WebConfig.class);
         context.scan("core.beans");
         container.addListener(new ContextLoaderListener(context));
         ServletRegistration.Dynamic dispatcher = container.addServlet("mvc", new DispatcherServlet(context));

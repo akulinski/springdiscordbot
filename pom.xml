@@ -9,12 +9,21 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>A Camel Spring Route</name>
+    <repositories>
+
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter-bintray</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+
+    </repositories>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <springVersion>4.1.1.RELEASE</springVersion>
+        <discordVersion>3.8.1_438</discordVersion>
     </properties>
 
     <dependencyManagement>
@@ -33,10 +42,9 @@
     <dependencies>
 
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>3.1.0</version>
-            <scope>provided</scope>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>${discordVersion}</version>
         </dependency>
 
         <dependency>
@@ -118,7 +126,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <version>4.0.1</version>
         </dependency>
 
     </dependencies>
@@ -151,6 +159,29 @@
                 <artifactId>camel-maven-plugin</artifactId>
                 <version>2.22.1</version>
             </plugin>
+
+            <!--allows to use maven resources in code (like env vars)-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>set-system-properties</goal>
+                        </goals>
+                        <configuration>
+                            <properties>
+                                <property>
+                                    <name>my.property.name</name>
+                                    <value>my.property.value</value>
+                                </property>
+                            </properties>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
