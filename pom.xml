@@ -22,7 +22,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <springVersion>4.1.1.RELEASE</springVersion>
+        <springVersion>5.1.0.RELEASE</springVersion>
         <discordVersion>3.8.1_438</discordVersion>
     </properties>
 
