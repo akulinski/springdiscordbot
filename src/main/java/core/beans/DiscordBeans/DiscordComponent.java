@@ -35,7 +35,6 @@ public class DiscordComponent {
             jda = new JDABuilder(token).addEventListener(new ReadyListener()).build();
             jda.awaitReady();
         } catch (InterruptedException | LoginException e) {
-            System.out.println("Shitty token");
             e.printStackTrace();
         }
     }
